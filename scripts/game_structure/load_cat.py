@@ -127,6 +127,8 @@ def json_load():
                 pattern=cat["pattern"],
                 skin=cat["skin"],
                 tint=cat["tint"] if "tint" in cat else "none",
+                pokemon_type_1=cat["pokemon_type_1"],
+                pokemon_type_2=cat["pokemon_type_2"] if "pokemon_type_2" in cat else None,
                 scars=cat["scars"] if "scars" in cat else [],
                 accessory=cat["accessory"],
                 opacity=cat["opacity"] if "opacity" in cat else 100,

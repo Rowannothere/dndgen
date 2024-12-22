@@ -3410,6 +3410,8 @@ class Cat:
                 "skin": self.pelt.skin,
                 "tint": self.pelt.tint,
                 "skill_dict": self.skills.get_skill_dict(),
+                "pokemon_type_1": self.pelt.pokemon_type_1,
+                "pokemon_type_2": self.pelt.pokemon_type_2,
                 "scars": self.pelt.scars or [],
                 "accessory": self.pelt.accessory,
                 "experience": self.experience,

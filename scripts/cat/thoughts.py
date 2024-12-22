@@ -95,6 +95,12 @@ class Thoughts:
         elif 'random_status_constraint' in thought and not random_cat:
             pass
 
+        # Constraints for the status of the main cat
+        if 'main_status_constraint' in thought:
+            if (main_cat.status not in thought['main_status_constraint'] and
+                    'any' not in thought['main_status_constraint']):
+                return False
+
         # main cat age constraint
         if 'main_age_constraint' in thought:
             if main_cat.age not in thought['main_age_constraint']:
@@ -150,6 +156,14 @@ class Thoughts:
 
         if 'random_backstory_constraint' in thought:
             if random_cat and random_cat.backstory not in thought['random_backstory_constraint']:
+                return False
+            
+        if 'main_type_constraint' in thought:
+            if main_cat.pelt.pokemon_type_1 not in thought['main_type_constraint'] and main_cat.pelt.pokemon_type_2 not in thought['main_type_constraint']:
+                return False
+            
+        if 'random_type_constraint' in thought:
+            if random_cat and random_cat.pelt.pokemon_type_1 not in thought['random_type_constraint'] and random_cat.pelt.pokemon_type_2 not in thought['random_type_constraint']:
                 return False
 
         # Filter for the living status of the random cat. The living status of the main cat

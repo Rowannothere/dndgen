@@ -63,6 +63,8 @@ class Pelt:
     blue_eyes = ['BLUE', 'DARKBLUE', 'CYAN', 'PALEBLUE', 'HEATHERBLUE', 'COBALT', 'SUNLITICE', 'GREY']
     green_eyes = ['PALEGREEN', 'GREEN', 'EMERALD', 'SAGE', 'HAZEL']
 
+    pokemon_types1 = ['NORMAL', 'GRASS', 'FIRE', 'WATER', 'ELECTRIC', 'STEEL', 'ROCK', 'FIGHTING', 'PSYCHIC', 'GHOST', 'POISON', 'DARK', 'FLYING', 'GROUND', 'DRAGON', 'ICE', 'BUG', 'FAIRY']
+
     # bite scars by @wood pank on discord
 
     # scars from other cats, other animals
@@ -163,6 +165,8 @@ class Pelt:
                  tortiepattern: str = None,
                  vitiligo: str = None,
                  points: str = None,
+                 pokemon_type_1: str = "NORMAL",
+                 pokemon_type_2:str=None,
                  accessory: str = None,
                  paralyzed: bool = False,
                  opacity: int = 100,
@@ -194,6 +198,8 @@ class Pelt:
         self.opacity = opacity
         self.scars = scars if isinstance(scars, list) else []
         self.tint = tint
+        self.pokemon_type_1 = pokemon_type_1
+        self.pokemon_type_2 = pokemon_type_2
         self.white_patches_tint = white_patches_tint
         self.cat_sprites = {"kitten": kitten_sprite if kitten_sprite is not None else 0,
                             "adolescent": adol_sprite if adol_sprite is not None else 0,
@@ -222,6 +228,7 @@ class Pelt:
         new_pelt.init_eyes(parents)
         new_pelt.init_pattern()
         new_pelt.init_tint()
+        new_pelt.init_pokemon_types(parents)
 
         return new_pelt
 
@@ -921,6 +928,26 @@ class Pelt:
                 self.white_patches_tint = "none"
         else:
             self.white_patches_tint = "none"
+
+    def init_pokemon_types(self, parents: tuple=()):
+        
+        par_types = set()
+        for p in parents:
+                par_types.add(p.pelt.pokemon_type_1)
+                par_types.add(p.pelt.pokemon_type_2)
+        
+        # Remove any None values from par_types
+        par_types.discard(None)
+
+        if par_types:
+            self.pokemon_type_1 = random.choice(list(par_types))
+            self.pokemon_type_2 = random.choice(list(par_types))
+                
+
+        if not self.pokemon_type_1:
+            self.pokemon_type_1 = random.choice(list(Pelt.pokemon_types1))
+        else:
+            self.pokemon_type_1 = random.choice(list(Pelt.pokemon_types1))
 
     @property
     def white(self):

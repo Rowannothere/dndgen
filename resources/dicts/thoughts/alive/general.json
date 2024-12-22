@@ -4904,5 +4904,167 @@
         "random_living_status": [
             "living"
         ]
+    },
+    {
+        "id": "normal_type_thoughts",
+        "thoughts": [
+            "Is normal"
+        ],
+        "main_type_constraint": [
+            "NORMAL"
+        ]
+    },
+    {
+        "id": "grass_type_thoughts",
+        "thoughts": [
+            "Is grass"
+        ],
+        "main_type_constraint": [
+            "GRASS"
+        ]
+    },
+    {
+        "id": "fire_type_thoughts",
+        "thoughts": [
+            "Is fire"
+        ],
+        "main_type_constraint": [
+            "FIRE"
+        ]
+    },
+    {
+        "id": "water_type_thoughts",
+        "thoughts": [
+            "Is water"
+        ],
+        "main_type_constraint": [
+            "WATER"
+        ]
+    },
+    {
+        "id": "electric_type_thoughts",
+        "thoughts": [
+            "Is electric"
+        ],
+        "main_type_constraint": [
+            "ELECTRIC"
+        ]
+    },
+    {
+        "id": "steel_type_thoughts",
+        "thoughts": [
+            "Is steel"
+        ],
+        "main_type_constraint": [
+            "STEEL"
+        ]
+    },
+    {
+        "id": "rock_type_thoughts",
+        "thoughts": [
+            "Is rock"
+        ],
+        "main_type_constraint": [
+            "ROCK"
+        ]
+    },
+    {
+        "id": "fighting_type_thoughts",
+        "thoughts": [
+            "Is fighting"
+        ],
+        "main_type_constraint": [
+            "FIGHTING"
+        ]
+    },
+    {
+        "id": "psychic_type_thoughts",
+        "thoughts": [
+            "Is psychic"
+        ],
+        "main_type_constraint": [
+            "PSYCHIC"
+        ]
+    },
+    {
+        "id": "ghost_type_thoughts",
+        "thoughts": [
+            "Is ghost"
+        ],
+        "main_type_constraint": [
+            "GHOST"
+        ]
+    },
+    {
+        "id": "poison_type_thoughts",
+        "thoughts": [
+            "Is poison"
+        ],
+        "main_type_constraint": [
+            "POISON"
+        ]
+    },
+    {
+        "id": "dark_type_thoughts",
+        "thoughts": [
+            "Is dark"
+        ],
+        "main_type_constraint": [
+            "DARK"
+        ]
+    },
+    {
+        "id": "flying_type_thoughts",
+        "thoughts": [
+            "Is flying"
+        ],
+        "main_type_constraint": [
+            "FLYING"
+        ]
+    },
+    {
+        "id": "ground_type_thoughts",
+        "thoughts": [
+            "Is ground"
+        ],
+        "main_type_constraint": [
+            "GROUND"
+        ]
+    },
+    {
+        "id": "dragon_type_thoughts",
+        "thoughts": [
+            "Is dragon"
+        ],
+        "main_type_constraint": [
+            "DRAGON"
+        ]
+    },
+    {
+        "id": "ice_type_thoughts",
+        "thoughts": [
+            "Is ice"
+        ],
+        "main_type_constraint": [
+            "ICE"
+        ]
+    },
+    {
+        "id": "bug_type_thoughts",
+        "thoughts": [
+            "Is bug"
+        ],
+        "main_type_constraint": [
+            "BUG"
+        ]
+    },
+    {
+        "id": "fairy_type_thoughts",
+        "thoughts": [
+            "Is fairy"
+        ],
+        "main_type_constraint": [
+            "FAIRY"
+        ]
     }
 ]

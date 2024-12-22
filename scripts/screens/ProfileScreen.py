@@ -757,6 +757,45 @@ class ProfileScreen(Screens):
         # NEWLINE ----------
         output += "\n"
 
+        # POKEMON TYPE
+        type_list = []
+        if the_cat.pelt.pokemon_type_1:
+            type_list.append(the_cat.pelt.pokemon_type_1)
+            if the_cat.pelt.pokemon_type_2:
+                type_list.append(the_cat.pelt.pokemon_type_2)
+
+        type_descriptions = {
+            'NORMAL': "normal type",
+            'GRASS': "grass type",
+            'FIRE': "fire type",
+            'WATER': "water type",
+            'ELECTRIC': "electric type",
+            'STEEL': "steel type",
+            'ROCK': "rock type",
+            'FIGHTING': "fighting type",
+            'PSYCHIC': "psychic type",
+            'GHOST': "ghost type",
+            'POISON': "poison type",
+            'DARK': "dark type",
+            'FLYING': "flying type",
+            'GROUND': "ground type",
+            'DRAGON': "dragon type",
+            'ICE': "ice type",
+            'BUG': "bug type",
+            'FAIRY': "fairy type"
+        }
+
+        if type_list:
+            output += "types: "
+            for type in type_list:
+                if type in type_descriptions:
+                    output += type_descriptions[type] + ", "
+                else:
+                    output += type + ", "  # In case the trait is not found in the dictionary
+            output = output.rstrip(", ")  # Remove the trailing comma and space
+
+        output += "\n"
+
         # AGE
         if the_cat.age == "kitten":
             output += "young"

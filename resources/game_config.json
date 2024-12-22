@@ -185,6 +185,7 @@
 		"base_female_tortie": 4,
 		"base_heterochromia": 120,
 		"direct_inheritance": 15,
+		"pokemon_type_inherit_chance": 100,
 		"wildcard_tortie": 9,
 		"vit_chance": 8,
 		"random_point_chance": 5
